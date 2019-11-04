@@ -18,6 +18,8 @@ Gráfica los ruidos blancos, mediante una dispersión de datos uniendo cada obse
 ```markdown
 plot(RuidoBlanco, col = "turquoise4")
 ```
+![1](https://user-images.githubusercontent.com/57273828/68147658-25c10380-ff00-11e9-8209-5c008f8d0d7e.png)
+
 Los datos tienen la estructura típica de un ruido blanco
 ```markdown
 PatronRuidoBlanco= "TRUE"      #TRUE (sí) FALSE (No)
@@ -26,6 +28,8 @@ Realiza un histrograma del ruido Blanco
 ```markdown
 hist(rnorm(355), prob= T, col = "turquoise4")
 ```
+![2](https://user-images.githubusercontent.com/57273828/68147702-3c675a80-ff00-11e9-8017-a93de7536a3b.png)
+
 ¿La gráfica es símetrica?
 ```markdown
 Simetria= "TRUE"              #TRUE (sí) FALSE (No)
@@ -51,10 +55,14 @@ CaminataAleatoria=RuidoBlanco[1]
     
 plot(CaminataAleatoria, type = "l", col = "turquoise4")
 ```
+![3](https://user-images.githubusercontent.com/57273828/68147722-51dc8480-ff00-11e9-9cee-18dfbdfd6dc3.png)
+
 Con la caminata aleatoria propuesta obten la gráfica de autocorrelaciones
 ```markdown
 acf(CaminataAleatoria)
 ```
+![4](https://user-images.githubusercontent.com/57273828/68147752-66b91800-ff00-11e9-8d05-d04fd6551c02.png)
+
 ¿Se puede asumir que las observaciones son altamante correlacionadas entre sí?
 ```markdown
 AutocorrelacionCaminata=   #TRUE (sí) FALSE (No)
@@ -72,6 +80,8 @@ Realiza la autocorrelación de las última diferencias.
 ```markdown
 acf(DoritoCaminata)
 ```
+![5](https://user-images.githubusercontent.com/57273828/68147810-7c2e4200-ff00-11e9-8e70-e6843ffc1312.png)
+
 ¿Se puede asumir que las observaciones diferenciadas son altamante correlacionadas entre sí?
 ```markdown
 AutocorrelacionDorito= "FALSE" #TRUE (sí) FALSE (No)
@@ -87,6 +97,8 @@ Realice la estimación de HoltWinter con el modelo multiplicativo,con la serie a
 EstimacionDiferenciacion= HoltWinters(DoritoCaminata.ts, seasonal = "mult" )
 plot(EstimacionDiferenciacion, col="turquoise4")
 ```
+![6](https://user-images.githubusercontent.com/57273828/68147851-910ad580-ff00-11e9-9caa-5fc18c19e7ad.png)
+
 Ahora haga un proyección de los datos para el siguiente periodo. (1)
 ```markdown
 ProyeccionDiferenciacion = predict(EstimacionDiferenciacion, n.ahead = 1)
@@ -149,10 +161,14 @@ print(x)
 ```markdown
 plot(x, type = "l")
 ```
+![7](https://user-images.githubusercontent.com/57273828/68147891-a2ec7880-ff00-11e9-958c-3793815ebedd.png)
+
 Realice la autocorrelacion del modelo simulado
 ```markdown
 acf(x)
 ```
+![8](https://user-images.githubusercontent.com/57273828/68147940-b4ce1b80-ff00-11e9-88b7-fac1ffc3bb95.png)
+
 Los valores simulados son altamente correlacionados
 ```markdown
 CorrelacionAR= "FALSE" #TRUE (sí) FALSE (No)
@@ -194,3 +210,4 @@ ProyeccionAR=estimado
 plot(x, type = "l")
 lines(x=251:260, estimado, col="red")
 ```
+![9](https://user-images.githubusercontent.com/57273828/68147988-c9aaaf00-ff00-11e9-9a24-301ace5d1493.png)
