@@ -1,5 +1,5 @@
 ## Ejercicio 2
-*Equipo 3 : Noria Montes Itzel y Vega Alba Mónica Kendra. 
+Equipo 3 : Noria Montes Itzel y Vega Alba Mónica Kendra. 
 
 ¿Cuáles son la propiedades númericas de un ruido blanco?
 
