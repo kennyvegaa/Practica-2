@@ -22,7 +22,7 @@ plot(RuidoBlanco, col = "turquoise4")
 
 Los datos tienen la estructura típica de un ruido blanco
 ```markdown
-PatronRuidoBlanco= "TRUE"      #TRUE (sí) FALSE (No)
+PatronRuidoBlanco= TRUE     #TRUE (sí) FALSE (No)
 ```
 Realiza un histrograma del ruido Blanco
 ```markdown
@@ -32,17 +32,17 @@ hist(rnorm(355), prob= T, col = "turquoise4")
 
 ¿La gráfica es símetrica?
 ```markdown
-Simetria= "TRUE"              #TRUE (sí) FALSE (No)
+Simetria= TRUE             #TRUE (sí) FALSE (No)
 ```
 ¿Viendo el histograma puedes asumir que tiene la distrubución que había asumido al inicio?
 ```markdown
-HistogramaDistribucion= "TRUE" #TRUE (sí) FALSE (No)
+HistogramaDistribucion= TRUE #TRUE (sí) FALSE (No)
 ```
-Se puede asumir que todos los ruidos blancos están autocorrelacionadas entre si?
+¿Se puede asumir que todos los ruidos blancos están autocorrelacionadas entre si?
 ```markdown
 Autocorrelacion= #TRUE (sí) FALSE (No)
 ```
-COn el ruido blanco, genera una caminata aleatoria usando el sustitución hacía atrás
+Con el ruido blanco, genera una caminata aleatoria usando el sustitución hacía atrás
 X(t)=X(t-1)+e(t)
 X(t)=X(t-2)+e(t-1)+e(t)
 Así hasta 
@@ -65,7 +65,7 @@ acf(CaminataAleatoria)
 
 ¿Se puede asumir que las observaciones son altamante correlacionadas entre sí?
 ```markdown
-AutocorrelacionCaminata=   #TRUE (sí) FALSE (No)
+AutocorrelacionCaminata=  TRUE #TRUE (sí) FALSE (No)
 ```
 Realiza la operación de diferencia con un lag de distancia.
 Delta(x(t))=X(t)-X(t-1)
@@ -84,7 +84,7 @@ acf(DoritoCaminata)
 
 ¿Se puede asumir que las observaciones diferenciadas son altamante correlacionadas entre sí?
 ```markdown
-AutocorrelacionDorito= "FALSE" #TRUE (sí) FALSE (No)
+AutocorrelacionDorito= FALSE #TRUE (sí) FALSE (No)
 ```
 La importancia de la diferenciación es que genera modelos que no son autocorrelacionados entre sí
 Esto es importante para la realización de series de tiempo. Para ello haga una estimación a través del método de 
@@ -171,13 +171,13 @@ acf(x)
 
 Los valores simulados son altamente correlacionados
 ```markdown
-CorrelacionAR= "FALSE" #TRUE (sí) FALSE (No)
+CorrelacionAR= FALSE #TRUE (sí) FALSE (No)
 ```
 ¿Se puede realizar un modelo autorregresivo?
 ```markdown
-Requesitos= "TRUE" #TRUE (sí) FALSE (No)
+Requesitos= TRUE #TRUE (sí) FALSE (No)
 ```
-ajusta un modelo AR(p) (autorregresivo de p grados) usando el método mle
+Ajusta un modelo AR(p) (autorregresivo de p grados) usando el método mle
 ```markdown
 ModeloAR= ar(x, method = "mle")
 ```
