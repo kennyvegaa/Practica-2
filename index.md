@@ -40,7 +40,7 @@ HistogramaDistribucion= TRUE #TRUE (sí) FALSE (No)
 ```
 ¿Se puede asumir que todos los ruidos blancos están autocorrelacionadas entre si?
 ```markdown
-Autocorrelacion= #TRUE (sí) FALSE (No)
+Autocorrelacion= TRUE  #TRUE (sí) FALSE (No)
 ```
 Con el ruido blanco, genera una caminata aleatoria usando el sustitución hacía atrás
 X(t)=X(t-1)+e(t)
